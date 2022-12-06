@@ -6,7 +6,7 @@ function App() {
 
   async function fetchHtml() {
     setHtmlFileString(
-      await (await fetch(`./components/components/header/text.htm`)).text()
+      await (await fetch('./components/components/header/text.htm')).text()
     )
   }
   useEffect(() => {
