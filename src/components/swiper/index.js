@@ -12,11 +12,23 @@ const MySwiper = ({ context }) => {
   return (
     <Swiper
       className='swiper'
+      effect='coverflow'
+      keyboard
+      centeredSlides
+      grabCursor
+      loop
       modules={[Navigation, Pagination]}
       slidesPerView={'auto'}
       navigation={{
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+      }}
+      coverflowEffect={{
+        rotate: 20,
+        stretch: 5,
+        depth: 180,
+        modifier: 1,
+        slideShadows: false,
       }}
       pagination={{ clickable: true, el: '.swiper-pagination' }}
     >
