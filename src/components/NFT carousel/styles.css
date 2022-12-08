@@ -2,57 +2,58 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 /* ------------ VARIABLES ------------ */
-:root{
+:root {
   /* FONT */
   --font: 'Montserrat';
 
-
   /* COLORS */
   --color: #001220;
-  --bg-color: #FCAF3C;
+  --bg-color: #fcaf3c;
 }
 
 /* ------------ BASE ------------ */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+/* body {
   font-family: 'Montserrat';
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 
-  
-  background-image: url(/jesus.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
+  background-image: url(jesus.svg);
+
+} */
 
 /* ----------- SLIDER ------------ */
-.swiper{
+.swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
-.swiper-wrapper{
+.swiper-wrapper {
   width: 100%;
   height: 35em;
   display: flex;
   align-items: center;
 }
 
-.card{
+.card {
   width: 20em;
   height: 90%;
   border-radius: 1em;
   padding: 2em 1em;
   background-color: #ff00dd28;
-  box-shadow: 0 0 .5em #ea00ff;
-  
+  box-shadow: 0 0 0.5em #ea00ff;
 
   display: flex;
   align-items: center;
@@ -61,79 +62,78 @@ body{
   margin: 0 2em;
 
   position: relative;
-  border-radius:15px;
-  margin:30px;
+  border-radius: 15px;
+  margin: 30px;
   justify-content: center;
-  border-top:1px solid rgba(255,255,255,0.5);
-  border-left:1px solid rgba(255,255,255,0.5);
-  border-bottom:1px solid rgba(255,255,255,0.5);
-  border-right:1px solid rgba(255,255,255,0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   transform-style: preserve-3d;
-  transform: perspective(800px)
+  transform: perspective(800px);
 }
 
-.swiper-slide:not(.swiper-slide-active){
-  filter: brightness(80%) blur(.5px);
-  -webkit-filter: brightness(80%) blur(.5px);
+.swiper-slide:not(.swiper-slide-active) {
+  filter: brightness(80%) blur(0.5px);
+  -webkit-filter: brightness(80%) blur(0.5px);
   background-color: #ffe1cc00;
 }
 
-.card__image{
+.card__image {
   width: 10em;
   height: 10em;
   border-radius: 50%;
-  border: 3px solid ;  
-  border-top:1px solid rgba(255,255,255,0.5);
-  border-left:1px solid rgba(255,255,255,0.5);
-  border-bottom:1px solid #ea00ff;
-  border-right:1px solid rgba(255,255,255,0.5);
+  border: 3px solid;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #ea00ff;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 0.5em #001220;
   padding: 3px;
   margin-bottom: 2em;
 }
 
-.card__image img{
+.card__image img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.card__content{
+.card__content {
   display: flex;
   align-items: center;
   flex-direction: column;
   color: #ffe1cc;
 }
 
-.card__title{
+.card__title {
   font-size: larger;
   position: relative;
-  top: .2em;
+  top: 0.2em;
 }
 
-.card__name{
-  color: #EC9355;
+.card__name {
+  color: #ec9355;
   font-size: larger;
 }
 
-
-.card__text{
-  text-align: center;;
-  margin: 2em 2em;
+.card__text {
+  text-align: center;
+  margin: 0.5em;
 }
 
-.card__btn{
+.card__btn {
   background-color: var(--color);
   color: #ffe1cc;
   text-transform: uppercase;
   font-size: large;
   font-family: 'Montserrat';
   border: none;
-  padding: .5em;
-  border-radius: .5em;
-  margin-top: .5em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
   cursor: pointer;
 }
