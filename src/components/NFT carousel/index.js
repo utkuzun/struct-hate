@@ -33,12 +33,12 @@ const NFTCarousel = () => {
                   src={require('./Card_HC_GoldFront.jpg')}
                   alt='card image'
                 />
-                <div className='card__content'>
-                  <span className='card__title'>{item.title}</span>
-                  <span className='card__name'>{item.name}</span>
-                  <p className='card__text'>{item.info}</p>
-                  <button className='card__btn'>{item.button}</button>
-                </div>
+              </div>
+              <div className='card__content'>
+                <span className='card__title'>{item.title}</span>
+                <span className='card__name'>{item.name}</span>
+                <p className='card__text'>{item.info}</p>
+                <button className='card__btn'>{item.button}</button>
               </div>
             </SwiperSlide>
           )

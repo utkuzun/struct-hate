@@ -35,6 +35,11 @@
 /* ----------- SLIDER ------------ */
 .swiper {
   width: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(./jesus.svg);
 }
 
 .swiper-wrapper {
@@ -48,7 +53,7 @@
   width: 20em;
   height: 90%;
   border-radius: 1em;
-  padding: 2em 1em;
+  padding: 1em 0.5em;
   background-color: #ff00dd28;
   box-shadow: 0 0 0.5em #ea00ff;
 
@@ -60,8 +65,7 @@
 
   position: relative;
   border-radius: 15px;
-  margin: 30px;
-  justify-content: center;
+  justify-content: flex-start;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);

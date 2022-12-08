@@ -21,22 +21,22 @@ const Team = () => {
       pagination={{ clickable: true, el: '.swiper-pagination' }}
     >
       <div className='swiper-wrapper'>
-        {[0, 1, 2, 3].map((item, index) => {
+        {[0, 1, 2, 3, 4].map((item, index) => {
           return (
             <SwiperSlide key={index} className='card swiper-slide'>
               <div className='card__image'>
-                <img src='/images.png' alt='card image' />
-                <div className='card__content'>
-                  <span className='card__title'>Participant`s Role</span>
-                  <span className='card__name'>Your Name Here</span>
-                  <p className='card__text'>
-                    blablabla very super important carreer milestones and
-                    testimonials
-                  </p>
-                  <button className='card__btn'>
-                    Linkedin or sth bs like that
-                  </button>
-                </div>
+                <img src={require('./images.png')} alt='card image' />
+              </div>
+              <div className='card__content'>
+                <span className='card__title'>Participant`s Role</span>
+                <span className='card__name'>Your Name Here</span>
+                <p className='card__text'>
+                  blablabla very super important carreer milestones and
+                  testimonials
+                </p>
+                <button className='card__btn'>
+                  Linkedin or sth bs like that
+                </button>
               </div>
             </SwiperSlide>
           )
