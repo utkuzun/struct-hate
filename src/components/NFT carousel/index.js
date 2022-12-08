@@ -3,7 +3,7 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper'
 
-import GoldFront from './Card_HC_GoldFront.jpg'
+import { useGlobalContext } from '../../context'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -11,6 +11,8 @@ import 'swiper/css/pagination'
 import './styles.css'
 
 const NFTCarousel = () => {
+  const { carousel } = useGlobalContext()
+
   return (
     <Swiper
       className='swiper'
@@ -23,34 +25,24 @@ const NFTCarousel = () => {
       pagination={{ clickable: true, el: '.swiper-pagination' }}
     >
       <div className='swiper-wrapper'>
-        <SwiperSlide className='card swiper-slide'>
-          <div className='card__image'>
-            <img src={GoldFront} alt='card image' />
-            <div className='card__content'>
-              <span className='card__title'>HEADLINE CREATOR</span>
-              <span className='card__name'>$49</span>
-              <p className='card__text'>
-                begin your journey without any limits and become a pianoeer of
-                the deserve to earn concept
-              </p>
-              <button className='card__btn'>buy NOW</button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className='card swiper-slide'>
-          <div className='card__image'>
-            <img src={GoldFront} alt='card image' />
-            <div className='card__content'>
-              <span className='card__title'>HEADLINE CREATOR</span>
-              <span className='card__name'>$49</span>
-              <p className='card__text'>
-                begin your journey without any limits and become a pianoeer of
-                the deserve to earn concept
-              </p>
-              <button className='card__btn'>buy NOW</button>
-            </div>
-          </div>
-        </SwiperSlide>
+        {carousel.map((item, index) => {
+          return (
+            <SwiperSlide key={index} className='card swiper-slide'>
+              <div className='card__image'>
+                <img
+                  src={require('./Card_HC_GoldFront.jpg')}
+                  alt='card image'
+                />
+                <div className='card__content'>
+                  <span className='card__title'>{item.title}</span>
+                  <span className='card__name'>{item.name}</span>
+                  <p className='card__text'>{item.info}</p>
+                  <button className='card__btn'>{item.button}</button>
+                </div>
+              </div>
+            </SwiperSlide>
+          )
+        })}
       </div>
       <div className='swiper-button-next'></div>
       <div className='swiper-button-prev'></div>
