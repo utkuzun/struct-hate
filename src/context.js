@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react'
 
 const AppContext = React.createContext()
-import { initialCarousel } from './data.js'
+import { initialCarousel, team } from './data.js'
 
 const AppProvider = ({ children }) => {
   const [carousel, setCorousel] = useState(initialCarousel)
 
   return (
-    <AppContext.Provider value={{ carousel, setCorousel }}>
+    <AppContext.Provider value={{ carousel, setCorousel, team }}>
       {children}
     </AppContext.Provider>
   )

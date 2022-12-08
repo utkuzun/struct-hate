@@ -35,3 +35,48 @@ export let initialCarousel = [
     info: 'start your journey as a newcomer and build your reputation from scratch to mint other NFTs for free',
   },
 ]
+
+export let team = [
+  {
+    title: 'Participant`s Role',
+    name: 'Your Name Here',
+    button: 'Linkedin or sth bs like that',
+    info: 'blablabla very super important carreer milestones and testimonials',
+  },
+  {
+    title: 'Participant`s Role',
+    name: 'Your Name Here',
+    button: 'Linkedin or sth bs like that',
+    info: 'blablabla very super important carreer milestones and testimonials',
+  },
+  {
+    title: 'Participant`s Role',
+    name: 'Your Name Here',
+    button: 'Linkedin or sth bs like that',
+    info: 'blablabla very super important carreer milestones and testimonials',
+  },
+  {
+    title: 'Participant`s Role',
+    name: 'Your Name Here',
+    button: 'Linkedin or sth bs like that',
+    info: 'blablabla very super important carreer milestones and testimonials',
+  },
+  {
+    title: 'Participant`s Role',
+    name: 'Your Name Here',
+    button: 'Linkedin or sth bs like that',
+    info: 'blablabla very super important carreer milestones and testimonials',
+  },
+  {
+    title: 'Participant`s Role',
+    name: 'Your Name Here',
+    button: 'Linkedin or sth bs like that',
+    info: 'blablabla very super important carreer milestones and testimonials',
+  },
+  {
+    title: 'Participant`s Role',
+    name: 'Your Name Here',
+    button: 'Linkedin or sth bs like that',
+    info: 'blablabla very super important carreer milestones and testimonials',
+  },
+]
