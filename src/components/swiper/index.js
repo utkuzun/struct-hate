@@ -8,14 +8,14 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import './styles.css'
 
-const MySwiper = ({ context }) => {
+const MySwiper = ({ context, ...rest }) => {
   return (
     <Swiper
       className='swiper'
       effect='coverflow'
       keyboard
-      centeredSlides
       grabCursor
+      centeredSlides
       loop
       modules={[Navigation, Pagination]}
       slidesPerView={'auto'}
@@ -31,6 +31,7 @@ const MySwiper = ({ context }) => {
         slideShadows: false,
       }}
       pagination={{ clickable: true, el: '.swiper-pagination' }}
+      {...rest}
     >
       <div className='swiper-wrapper'>
         {context.map((item, index) => {
