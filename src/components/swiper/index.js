@@ -38,7 +38,7 @@ const MySwiper = ({ context, ...rest }) => {
           return (
             <SwiperSlide key={index} className='card swiper-slide'>
               <div className='card__image'>
-                <img src={require('./images.png')} alt='card image' />
+                <img src={item.image} alt='card image' />
               </div>
               <div className='card__content'>
                 <span className='card__title'>{item.title}</span>
