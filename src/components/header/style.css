@@ -77,6 +77,7 @@
   justify-content: space-between;
   width: 30px;
   height: 20px;
+  cursor: pointer;
 }
 .hamburger.menu .bar {
   height: 1px;
@@ -112,7 +113,10 @@
     color: #ffe1cc;
     font-family: 'Montserrat';
     font-size: 16px;
-    position: relative;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    z-index: 100;
     padding-bottom: 1rem;
   }
   .mobile.links a li {
@@ -130,8 +134,7 @@
 }
 .secondheader {
   width: 96%;
-  height: 100%;
-  display: block;
+  display: flex;
   margin: 0 auto;
 }
 

@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.css'
 
+import MyButton from './buttons'
+
 const Header = () => {
+  const [showSeconder] = useState(false)
+  const [showMobile, setShowMobile] = useState(false)
+
   return (
     <div className='background'>
       <div className='header'>
@@ -10,54 +15,61 @@ const Header = () => {
             <h1>
               V<span>erlith</span>
             </h1>
-            <a className='hamburger menu'>
+            <a
+              className='hamburger menu'
+              onClick={() => {
+                setShowMobile(!showMobile)
+              }}
+            >
               <span className='bar'></span>
               <span className='bar'></span>
               <span className='bar'></span>
             </a>
-            <ul className='navigation'>
-              <a>
-                <li>NFT</li>
-              </a>
-              <a>
-                <li>Whitepaper</li>
-              </a>
-              <a>
-                <li>Socials</li>
-              </a>
-              <a>
-                <li>HX13 Company</li>
-              </a>
-            </ul>
+
+            {showMobile ? (
+              <ul className='mobile links'>
+                <a>
+                  <li>NFT</li>
+                </a>
+                <a>
+                  <li>Whitepaper</li>
+                </a>
+                <a>
+                  <li>Socials</li>
+                </a>
+                <a>
+                  <li>HX13 Company</li>
+                </a>
+              </ul>
+            ) : (
+              <ul className='navigation'>
+                <a>
+                  <li>NFT</li>
+                </a>
+                <a>
+                  <li>Whitepaper</li>
+                </a>
+                <a>
+                  <li>Socials</li>
+                </a>
+                <a>
+                  <li>HX13 Company</li>
+                </a>
+              </ul>
+            )}
           </div>
         </div>
-        <ul className='mobile links'>
-          <a>
-            <li>NFT</li>
-          </a>
-          <a>
-            <li>Whitepaper</li>
-          </a>
-          <a>
-            <li>Socials</li>
-          </a>
-          <a>
-            <li>HX13 Company</li>
-          </a>
-        </ul>
       </div>
-      {/* <div className='secondheader'>
-        <div className='startapp'>
-          <div className='btn'>
-            <a href='#'>Start App</a>
-          </div>
-          <div className='connect'>
-            <div className='btn'>
-              <a href='#'>Connect</a>
-            </div>
+      {showSeconder && (
+        <div className='secondheader'>
+          <div className='startapp'>
+            <MyButton text={'Start App'} />
+            <MyButton text={'Connect'} />
+            <MyButton text={'Team'} />
+            <MyButton text={'Buy Now'} />
           </div>
         </div>
-      </div> */}
+      )}
     </div>
   )
 }
