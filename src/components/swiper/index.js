@@ -6,12 +6,12 @@ import { Navigation, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import './styles.css'
+import styles from './Swiper.module.css'
 
 const MySwiper = ({ context, ...rest }) => {
   return (
     <Swiper
-      className='swiper'
+      className={styles.swiper}
       effect='coverflow'
       keyboard
       grabCursor
@@ -33,19 +33,31 @@ const MySwiper = ({ context, ...rest }) => {
       pagination={{ clickable: true, el: '.swiper-pagination' }}
       {...rest}
     >
-      <div className='swiper-wrapper'>
+      <div className={styles.swiperWrapper}>
         {context.map((item, index) => {
           return (
-            <SwiperSlide key={index} className='card swiper-slide'>
-              <div className='card__image'>
-                <img src={item.image} alt='card image' />
-              </div>
-              <div className='card__content'>
-                <span className='card__title'>{item.title}</span>
-                <span className='card__name'>{item.name}</span>
-                <p className='card__text'>{item.info}</p>
-                <button className='card__btn'>{item.button}</button>
-              </div>
+            <SwiperSlide key={index} className={`${styles.card}`}>
+              {({ isActive }) => (
+                <div
+                  className={`${!isActive && styles.notActiveSlide} ${
+                    styles.flex
+                  }`}
+                >
+                  <div className={styles.cardImage}>
+                    <img
+                      src={item.image}
+                      alt='card image'
+                      className={styles.cardImageImg}
+                    />
+                  </div>
+                  <div className={styles.cardContent}>
+                    <span className={styles.cardTitle}>{item.title}</span>
+                    <span className={styles.cardName}>{item.name}</span>
+                    <p className={styles.cardText}>{item.info}</p>
+                    <button className={styles.cardBtn}>{item.button}</button>
+                  </div>
+                </div>
+              )}
             </SwiperSlide>
           )
         })}
