@@ -9,13 +9,20 @@ body {
   display: flex;
   flex-direction: column;
 
-  /* background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(/public/jesus.svg); */
+  background-image: url(/public/jesus.svg);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+section.custom {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/public/jesus.svg);
 }

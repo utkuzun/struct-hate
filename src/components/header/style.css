@@ -95,6 +95,9 @@
   .hamburger.menu {
     display: flex;
   }
+  .navigation {
+    display: none;
+  }
   .inner.header {
     height: 80px;
     position: relative;

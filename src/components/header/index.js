@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import './style.css'
 
-import MyButton from './buttons'
-
 const Header = () => {
-  const [showSeconder] = useState(false)
   const [showMobile, setShowMobile] = useState(false)
 
   return (
@@ -26,7 +23,7 @@ const Header = () => {
               <span className='bar'></span>
             </a>
 
-            {showMobile ? (
+            {showMobile && (
               <ul className='mobile links'>
                 <a>
                   <li>NFT</li>
@@ -41,35 +38,38 @@ const Header = () => {
                   <li>HX13 Company</li>
                 </a>
               </ul>
-            ) : (
-              <ul className='navigation'>
-                <a>
-                  <li>NFT</li>
-                </a>
-                <a>
-                  <li>Whitepaper</li>
-                </a>
-                <a>
-                  <li>Socials</li>
-                </a>
-                <a>
-                  <li>HX13 Company</li>
-                </a>
-              </ul>
             )}
+            <ul className='navigation'>
+              <a>
+                <li>NFT</li>
+              </a>
+              <a>
+                <li>Whitepaper</li>
+              </a>
+              <a>
+                <li>Socials</li>
+              </a>
+              <a>
+                <li>HX13 Company</li>
+              </a>
+            </ul>
           </div>
         </div>
       </div>
-      {showSeconder && (
+      {
         <div className='secondheader'>
           <div className='startapp'>
-            <MyButton text={'Start App'} />
-            <MyButton text={'Connect'} />
-            <MyButton text={'Team'} />
-            <MyButton text={'Buy Now'} />
+            <div className='btn'>
+              <a href='#'>Start App</a>
+            </div>
+            <div className='connect'>
+              <div className='btn'>
+                <a href='#'>Connect</a>
+              </div>
+            </div>
           </div>
         </div>
-      )}
+      }
     </div>
   )
 }
