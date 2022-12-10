@@ -1,14 +1,17 @@
 import React from 'react'
 
+import MyButton from '../buttons'
+
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper'
+import { Navigation, Pagination, EffectCoverflow } from 'swiper'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import 'swiper/css/effect-coverflow'
 import styles from './Swiper.module.css'
 
-const MySwiper = ({ context, ...rest }) => {
+const MySwiper = ({ context, coverflow = false, ...rest }) => {
   return (
     <Swiper
       className={styles.swiper}
@@ -17,23 +20,26 @@ const MySwiper = ({ context, ...rest }) => {
       grabCursor
       centeredSlides
       loop
-      modules={[Navigation, Pagination]}
+      modules={[Navigation, Pagination, EffectCoverflow]}
       slidesPerView={'auto'}
       navigation={{
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       }}
-      coverflowEffect={{
-        rotate: 20,
-        stretch: 5,
-        depth: 180,
-        modifier: 1,
-        slideShadows: false,
-      }}
+      coverflowEffect={
+        coverflow && {
+          rotate: 20,
+          stretch: 5,
+          depth: 180,
+          modifier: 1,
+          slideShadows: false,
+        }
+      }
       pagination={{ clickable: true, el: '.swiper-pagination' }}
       {...rest}
     >
       <div className={styles.swiperWrapper}>
+        <MyButton text={'Start App'} />
         {context.map((item, index) => {
           return (
             <SwiperSlide key={index} className={`${styles.card}`}>
