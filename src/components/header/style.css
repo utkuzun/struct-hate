@@ -13,7 +13,6 @@
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(0.5px);
   -webkit-backdrop-filter: blur(0.5px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   top: 0;
@@ -109,15 +108,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #001220;
     color: #ffe1cc;
     font-family: 'Montserrat';
     font-size: 16px;
     position: absolute;
-    top: 80px;
-    width: 100%;
+    top: 79px;
+    left: -1px;
+    width: 101%;
     z-index: 100;
     padding-bottom: 1rem;
+    background: rgba(27, 25, 25, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
   }
   .mobile.links a li {
     padding: 1rem;
