@@ -2,12 +2,10 @@ import React from 'react'
 
 import styles from './Button.module.css'
 
-const MyButton = ({ text }) => {
+const MyButton = ({ text, color }) => {
   return (
-    <div className={styles.container}>
-      <div className={`${styles.btn} ${styles.color1}`}>
-        <a href='#'>{text}</a>
-      </div>
+    <div className={`${styles.btn} ${styles[color]}`}>
+      <a href='#'>{text}</a>
     </div>
   )
 }
