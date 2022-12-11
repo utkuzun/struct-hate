@@ -23,8 +23,8 @@ const MySwiper = ({
       effect='coverflow'
       keyboard
       grabCursor
-      centeredSlides
       loop
+      centeredSlides
       modules={[Navigation, Pagination, EffectCoverflow]}
       slidesPerView={'auto'}
       navigation={{
