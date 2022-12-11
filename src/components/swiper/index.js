@@ -11,7 +11,12 @@ import 'swiper/css/pagination'
 import 'swiper/css/effect-coverflow'
 import styles from './Swiper.module.css'
 
-const MySwiper = ({ context, coverflow = false, ...rest }) => {
+const MySwiper = ({
+  context,
+  coverflow = false,
+  customBtn = false,
+  ...rest
+}) => {
   return (
     <Swiper
       className={styles.swiper}
@@ -60,7 +65,11 @@ const MySwiper = ({ context, coverflow = false, ...rest }) => {
                     <span className={styles.cardTitle}>{item.title}</span>
                     <span className={styles.cardName}>{item.name}</span>
                     <p className={styles.cardText}>{item.info}</p>
-                    <button className={styles.cardBtn}>{item.button}</button>
+                    {customBtn ? (
+                      <MyButton text={item.button} color={'color4'} />
+                    ) : (
+                      <button className={styles.cardBtn}>{item.button}</button>
+                    )}
                   </div>
                 </div>
               )}

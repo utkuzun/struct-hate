@@ -6,20 +6,19 @@
   font-family: 'Montserrat';
 }
 
-.container {
-  width: 100%;
+.btnContainer {
   padding: 0 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.container .btn {
+.btnContainer .btn {
   position: relative;
   width: 155px;
   height: 50px;
   margin: 20px;
 }
-.container .btn a {
+.btnContainer .btn a {
   position: absolute;
   top: 0;
   left: 0;
@@ -42,10 +41,10 @@
   transition: 0.5s;
   backdrop-filter: blur(15px);
 }
-.container .btn:hover a {
+.btnContainer .btn:hover a {
   letter-spacing: 3px;
 }
-.container .btn a::before {
+.btnContainer .btn a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -56,10 +55,10 @@
   transform: skewX(45dg) translateX(0);
   transition: 0.5s;
 }
-.container .btn:hover a:before {
+.btnContainer .btn:hover a:before {
   transform: skewX(45deg) translateX(200%);
 }
-.container .btn::before {
+.btnContainer .btn::before {
   content: '';
   position: absolute;
   left: 50%;
@@ -72,14 +71,14 @@
   transition: 0.5s;
   transition-delay: 0s;
 }
-.container .btn:hover::before {
+.btnContainer .btn:hover::before {
   bottom: 0;
   height: 50%;
   width: 80%;
   border-radius: 30px;
   transition-delay: 0.5s;
 }
-.container .btn::after {
+.btnContainer .btn::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -92,33 +91,33 @@
   transition: 0.5s;
   transition-delay: 0s;
 }
-.container .btn:hover::after {
+.btnContainer .btn:hover::after {
   top: 0;
   height: 50%;
   width: 80%;
   border-radius: 30px;
   transition-delay: 0.5s;
 }
-.container .btn.color1::before,
-.container .btn.color1::after {
+.btnContainer .btn.color1::before,
+.btnContainer .btn.color1::after {
   background: #ff171f;
   box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71,
     0 0 60px #ff1f71;
 }
-.container .btn.color2::before,
-.container .btn.color2::after {
+.btnContainer .btn.color2::before,
+.btnContainer .btn.color2::after {
   background: #2bd2ff;
   box-shadow: 0 0 5px #2bd2ff, 0 0 15px #2bd2ff, 0 0 30px #2bd2ff,
     0 0 60px #2bd2ff;
 }
-.container .btn.color3::before,
-.container .btn.color3::after {
+.btnContainer .btn.color3::before,
+.btnContainer .btn.color3::after {
   background: #1eff45;
   box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
     0 0 60px #1eff45;
 }
-.container .btn.color4::before,
-.container .btn.color4::after {
+.btnContainer .btn.color4::before,
+.btnContainer .btn.color4::after {
   background: #da1eff;
   box-shadow: 0 0 5px #da1eff, 0 0 15px #da1eff, 0 0 30px #da1eff,
     0 0 60px #da1eff;

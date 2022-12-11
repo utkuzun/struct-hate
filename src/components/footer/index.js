@@ -13,7 +13,7 @@ import './style.css'
 const Footer = () => {
   return (
     <footer className='footer'>
-      <div className='container'>
+      <div className='containerFoot'>
         <div className='row'>
           <div className='footer-col'>
             <ul>
