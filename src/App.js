@@ -1,8 +1,6 @@
 import React from 'react'
-import styles from './App.module.css'
 
-// import styles from './components/buttons/Button.module.css'
-
+import Container from './components/container'
 import Header from './components/header'
 import NFTCarousel from './components/NFT carousel'
 import Team from './components/team'
@@ -16,14 +14,14 @@ function App() {
         <MyButton text={'Start App'} color={'color1'} />
         <MyButton text={'Connect'} color={'color2'} />
       </div> */}
-      <div className={`${styles.containerApp}`}>
+      <Container>
         <MyButton text={'Start App'} color={'color1'} />
         <NFTCarousel />
-      </div>
-      <div className={`${styles.containerApp}`}>
+      </Container>
+      <Container>
         <MyButton text={'Team'} color={'color3'} />
         <Team />
-      </div>
+      </Container>
       <Footer />
     </div>
   )
