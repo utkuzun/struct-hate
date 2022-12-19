@@ -7,7 +7,6 @@
 }
 
 .btnContainer {
-  padding: 0 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
