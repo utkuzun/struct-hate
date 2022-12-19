@@ -2,6 +2,8 @@ import React from 'react'
 
 import MyButton from '../buttons'
 
+import Tilt from 'react-parallax-tilt'
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, EffectCoverflow } from 'swiper'
 
@@ -56,13 +58,15 @@ const MySwiper = ({
                     styles.flex
                   }`}
                 >
-                  <div className={`${styles.cardImage} rgb circle`}>
-                    <img
-                      src={item.image}
-                      alt='card image'
-                      className={styles.cardImageImg}
-                    />
-                  </div>
+                  <Tilt glareEnable={true} glareMaxOpacity={1} scale={1.1}>
+                    <div className={`${styles.cardImage} rgb circle flex`}>
+                      <img
+                        src={item.image}
+                        alt='card image'
+                        className={styles.cardImageImg}
+                      />
+                    </div>
+                  </Tilt>
                   <div
                     className={`${styles.cardContent} ${
                       coverflow && styles.coverflowCustom
