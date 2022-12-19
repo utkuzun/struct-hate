@@ -116,9 +116,15 @@
 
 .cardContent {
   display: flex;
+  padding: 0 1rem;
   align-items: center;
   flex-direction: column;
   color: #ffe1cc;
+  gap: 10px;
+}
+
+.coverflowCustom {
+  width: 70%;
 }
 
 .cardTitle {
@@ -134,7 +140,6 @@
 
 .cardText {
   text-align: center;
-  margin: 2em 2em;
   font-family: 'Montserrat';
   font-weight: lighter;
 }

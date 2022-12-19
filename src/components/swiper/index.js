@@ -61,7 +61,11 @@ const MySwiper = ({
                       className={styles.cardImageImg}
                     />
                   </div>
-                  <div className={styles.cardContent}>
+                  <div
+                    className={`${styles.cardContent} ${
+                      coverflow && styles.coverflowCustom
+                    }`}
+                  >
                     <span className={styles.cardTitle}>{item.title}</span>
                     <span className={styles.cardName}>{item.name}</span>
                     <p className={styles.cardText}>{item.info}</p>
