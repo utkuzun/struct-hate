@@ -7,6 +7,9 @@ import Team from './components/team'
 import Footer from './components/footer'
 import MyButton from './components/buttons'
 function App() {
+  document.addEventListener('contextmenu', (e) => {
+    e.preventDefault()
+  })
   return (
     <div>
       <Header />
