@@ -9,7 +9,9 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-coverflow'
+
 import styles from './Swiper.module.css'
+import '../../index.css'
 
 const MySwiper = ({
   context,
@@ -54,7 +56,7 @@ const MySwiper = ({
                     styles.flex
                   }`}
                 >
-                  <div className={styles.cardImage}>
+                  <div className={`${styles.cardImage} rgb circle`}>
                     <img
                       src={item.image}
                       alt='card image'

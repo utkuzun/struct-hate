@@ -105,6 +105,9 @@
   padding: 3px;
   margin-bottom: 2em;
   justify-self: center;
+  transform-style: preserve-3d;
+
+  position: relative;
 }
 
 .cardImageImg {
