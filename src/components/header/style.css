@@ -46,6 +46,7 @@
   display: table;
   float: left;
   padding: 0px 20px;
+  cursor: pointer;
 }
 .navigation a li {
   display: table-cell;
@@ -125,6 +126,7 @@
   }
   .mobile.links a li {
     padding: 1rem;
+    cursor: pointer;
   }
   .mobile.links a:hover {
     background-color: #ec9355;
